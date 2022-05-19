@@ -1,0 +1,150 @@
+.dock {
+    width: auto;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+}
+
+.dock .dock-container {
+    padding: 3px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+.dock .dock-container .li-bin {
+    margin-left: 20px;
+    border-left: 1.5px solid rgba(255, 255, 255, 0.4);
+    padding: 0px 10px;
+}
+
+.dock .dock-container .li-1::after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+    bottom: 2px;
+}
+
+.dock .dock-container li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+    transition: 0.2s;
+    transform-origin: 50% 100%;
+    margin-right: 19px;
+}
+
+.dock .dock-container li:hover {
+    margin: 0px 13px 0px 13px;
+}
+
+.dock .dock-container li .ico {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.dock .dock-container li .ico-bin {
+    width: 94% !important;
+    height: 94% !important;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.dock .dock-container li .ico-bin:hover {
+    margin-left: 10px;
+}
+
+
+/* -----------------------------------------menue-mac--------------------------------------------- */
+
+.dock1 {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 150px;
+    left: 48%;
+    height: 80px;
+}
+
+.dock1 .dock1-container {
+    padding: 3px;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    transform: translate(7%, 10%);
+}
+
+.dock1 .dock1-container li {
+    list-style: none;
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    /* transition: 0.2s; */
+    transform-origin: 50% 100%;
+}
+
+
+/* .dock1 .dock1-container li a {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    width: 100% !important;
+    float: left;
+    font-size: 30px;
+} */
+
+.dock1 .dock1-container li a:hover {
+    margin: 13px 0px 13px 0px;
+}
+
+.dock1 .dock1-container li .ico {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+    display: block;
+    cursor: pointer;
+}
+
+.dock1-container:hover .ico:not(:hover) {
+    filter: blur(50%);
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 576px) {
+    .dock1 .dock1-container {
+        transform: translate(-40%, 0%) !important;
+    }
+
+    .dock,
+    .social-media-contact {
+        display: none;
+    }
+}
